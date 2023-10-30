@@ -22,8 +22,6 @@ img {
     height: auto;
 }
 
-
-
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -55,6 +53,7 @@ button {
     line-height: 1.5;
         /* 150% */
     letter-spacing: 0.04em;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:hover,
@@ -89,6 +88,19 @@ body {
 .menu {
     display: flex;
     gap: 40px;
+}
+
+.link-studio::after {
+    display: block;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--OCEAN, #404BBF);
+    content: "";
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
 }
 
 .address-menu {
@@ -128,6 +140,7 @@ body {
         /* 150% */
     letter-spacing: 0.02em;
     color: var(--NAVY-BLUE, #2E2F42);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -150,6 +163,7 @@ body {
         /* 150% */
     letter-spacing: 0.02em;
     color: var(--SLATE, #434455);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -163,6 +177,8 @@ body {
 .hero {
     background-color: var(--NAVY-BLUE, #2E2F42);
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),  rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
+    background-size: cover;
 }
 /*h1*/
 .main-head {
@@ -242,6 +258,16 @@ body {
     gap: 24px;
 }
 
+.info-icon-box {
+    width: 264;
+    height: 108;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    padding: 24px 100px;
+    background-color: #F4F4FD;
+    margin-bottom: 8px;
+}
+
 .text-benefits {
     margin-bottom: 0;
 }
@@ -258,6 +284,9 @@ body {
 
 .member {
     padding: 32px 0;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .members-img {
@@ -273,8 +302,48 @@ body {
 .menu-team {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px; 
+    column-gap: 24px; 
+}
+
+.team-head {
     text-align: center;
+}
+
+.text-info-team {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/*.sli-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    fill: #4D5AE5;
+}*/
+
+.social-list {
+   display: flex;
+   column-gap: 24px;
+   justify-content: center;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: #31D0AA;
+}
+
+.social-list-icon {
+   
 }
 
 /*Our Team section - END*/
@@ -294,20 +363,53 @@ body {
     row-gap: 48px;
 }
 
+
 .servises {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-/*
-.portfolio-img {
-    margin-bottom: 32px;
+
+.overlay-wrapper {
+    position: relative;
+    overflow: hidden;
 }
-*/
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    color: var(--CLOUD, #F4F4FD);
+        /* Body */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+        /* 150% */
+    letter-spacing: 0.02em;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 164px;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+}
+
+.overlay-wrapper:hover .overlay-text {
+    transform: translateY(0%);
+}
+
 
 /*Portfolio section END*/
 
 /*Futer section*/
+
+.futer-menu {
+    display: flex;
+    gap: 120px;
+}
 
 .futer-logo {
     display: inline-block;
@@ -341,6 +443,23 @@ body {
 .futer-text-info {
     color: var(--CLOUD, #F4F4FD);
     max-width: 264px;
+}
+
+
+.futer-social {
+    color: var(--WHITE, #FFF);
+        /* Body Medium */
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        /* 150% */
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
+}
+
+.social-list-futer {
+    gap: 16px;
 }
 
 /*Futer section END*/
