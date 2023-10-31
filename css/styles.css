@@ -131,23 +131,7 @@ body {
     gap: 40px;
 }
 
-.link-studio {
-    position: relative;
-    color: #404bbf;
-}
 
-.link-studio::after {
-    position: absolute;
-    display: block;
-    width: 48px;
-    height: 4px;
-    border-radius: 2px;
-    background: var(--OCEAN, #404BBF);
-    content: "";
-    margin-left: 0;
-    padding-bottom: -1px;
-
-}
 
 .address-menu {
     display: flex;
@@ -197,6 +181,24 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--NAVY-BLUE, #2E2F42);
+}
+
+.link-studio {
+    position: relative;
+    color: #404bbf;
+}
+
+.link-studio::after {
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--OCEAN, #404BBF);
+    content: "";
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: -1px;
 }
 
 .page-address{
